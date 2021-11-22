@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import AddIcon from '@mui/icons-material/Add';
 
 const InputArea = (props) => {
     const [note, setNote] = useState({ title: "", content: "" })
@@ -28,13 +29,13 @@ const InputArea = (props) => {
                 placeholder="Write down a note..."
                 onChange={handleChange}
                 value={note.content} />
-            <button
-                className=""
+            <AddIcon
+                className="ml-screen"
                 type="submit"
                 onClick={() => {
                     props.addNote(note)
                     setNote({ title: "", content: "" })
-                }}>Add Note</button>
+                }}>Add Note</AddIcon>
         </div>
     )
 }
